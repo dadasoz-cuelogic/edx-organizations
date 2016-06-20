@@ -28,6 +28,8 @@ class Organization(TimeStampedModel):
     )
     active = models.BooleanField(default=True)
 
+    featured = models.BooleanField(default=False)
+
     def __unicode__(self):
         return u"{}".format(self.name)
 

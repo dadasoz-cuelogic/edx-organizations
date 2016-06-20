@@ -22,7 +22,7 @@ class Organization(TimeStampedModel):
     short_name = models.CharField(max_length=255, db_index=True)
     description = models.TextField()
     logo = models.ImageField(
-        upload_to='organization_logos',
+        upload_to='/edx/var/edxapp/media/organization_logos',
         help_text=_(u'Please add only .PNG files for logo images.'),
         null=True, blank=True, max_length=255
     )
